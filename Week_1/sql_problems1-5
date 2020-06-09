@@ -1,4 +1,0 @@
-/*Which shippers do we have?*/
-SELECT * 
-FROM sql_practice.Shippers;
-
