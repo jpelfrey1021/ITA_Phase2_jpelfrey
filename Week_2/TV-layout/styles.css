@@ -1,0 +1,435 @@
+/*///////////////    GENERAL   ///////////*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    /* outline-width: 0.5px;
+    outline-style: auto;
+    outline-color: black; */
+}
+
+body {
+    background-color: #F2F2F2;
+}
+
+#container {
+    width: 1200px;
+    background: #FFFFFF;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 55px;
+    line-height: 57px;
+    margin: 5px 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 20px;
+}
+
+a:link {
+    color: #F3323D;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #F3323D;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn {
+    background-color: #F3323D;
+    border-radius: 16px;
+    border: none;
+    outline: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: translateY(4px);
+    
+}
+
+.clearfix:after { 
+    content: "";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+
+/*//////////   NAVIGATION BAR   ////////////*/
+.nav {
+    height: 70px;
+}
+
+.nav__bar {
+    margin: 0 75px 0;
+    width: 1050px;
+}
+
+.nav__bar li {
+    list-style: none;
+    display: inline-block;
+    width: 160px;
+    text-align: center;
+}
+
+.nav__bar a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav__bar a:hover {
+    text-decoration: underline;
+    color: #D62A33;
+}
+
+#nav__bar__logo {
+    margin: 20px 30px 20px;
+}
+
+#nav__bar__btn {
+    width: 160px;
+    height: 40px;
+    color: white;
+}
+
+
+/*////////////   image banner   /////////////*/
+.block-photo {
+    background: url("images/mother_daughter.png");
+    max-width: 1200px;
+    width: 100%;
+    height: 525px;
+    position: relative;
+}
+
+#photo__text {
+    position: absolute;
+    right: 75px;
+    bottom: 50%;
+    width: 400px;
+}
+
+#photo__text p {
+    font-size: 20px;
+    font-family: sans-serif;
+    line-height: 23px;
+    color: #5A5A5A;
+}
+
+
+/*////////////   GENERAL   ////////////*/
+#content {
+    position: relative;
+    width: 1050px;
+}
+
+
+/*////////////   PLANS   ////////////*/
+.plans-block {
+    width: 1050px;
+    height: 700px;
+    position: absolute;
+    top: 420px;
+    left: 50%;
+    margin-left: -525px;
+}
+
+.transparent {
+    background: #FFFFFF;
+    opacity: 90%;
+}
+
+#plans {
+    box-shadow: 0 5px #E0E0E0;
+}
+
+/*change location line*/
+#location {
+    text-align: center;
+    width: 600px;
+    height: 30px;
+    margin: 20px auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 245px;
+    grid-template-rows: 120px 25px 150px 25px 25px 25px 25px 25px;
+}
+
+/*product boxes*/
+.product__option {
+    height: 450px;
+    text-align: center;
+    opacity: 100%; /*not working*/
+    background-color: white;
+    outline: 1px solid #E0E0E0;
+    box-shadow: 0 5px #E0E0E0;
+}
+
+.product__option p {
+    margin: 10px;
+}
+
+.product__laptop-icon {
+    margin: auto;
+}
+
+.feature {
+    color: #5A5A5A;
+}
+
+
+/*prices*/
+.product__price {
+    position: relative;
+}
+
+.price__dollar {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    top: 25%;
+    left: 5%;
+}
+
+.price__main {
+    font-size: 90px;
+    position: absolute;
+    font-weight: bold;
+    top: 10%;
+    left: 20%;
+}
+
+.price__cents {
+    position: absolute;
+    font-size: 20px;
+    top: 25%;
+    right: 7%;
+    color: #5A5A5A;
+}
+
+.price__term {
+    position: absolute;
+    font-size: 8px;
+    right: 7%;
+    top: 50%;
+    text-align: left;
+    color: #5A5A5A;
+}
+
+.price__term p {
+    margin-top: -7px;
+    margin-bottom: -5px;
+    font-size: 8px;
+    line-height: 20px;
+}
+
+
+/*/////////   cart start order section   ////////*/
+#start-order {
+    margin: 45px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#start-order__text h2 {
+    padding-bottom: 5px;
+}
+
+#start-order__text p {
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 0 20px;
+    color: #5A5A5A;
+}
+
+#start-order__btn {
+    font-size: 18px;
+    width: 300px;
+    height: 55px;
+    color: white;
+}
+
+
+/*////////////////   slider   /////////////////*/
+
+.slider {
+    width: 1050px;
+    margin: 625px auto 50px;
+}
+
+/*arrows*/
+.slider__circle {
+    border: 1px solid #BDBDBD;
+    border-radius: 50%;
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+}
+
+.slider__arrow {
+    font-size: 20px;
+    color: #BDBDBD;
+    background-color: white;
+    margin-top: 5px;
+    border: none;
+    outline: none;
+}
+
+.slider__arrow:hover {
+    cursor: pointer;
+}
+
+.slider__arrow:active {
+    transform: translateY(4px);
+}
+
+/*content*/
+.slider__text {
+    font-size: 20px;
+    padding: 20px;
+    text-align: left;
+}
+
+.slider__text p {
+    padding: 10px 0;
+    color: #5A5A5A;
+    font-family: sans-serif;
+}
+
+#slider__btn {
+    width: 160px;
+    height: 40px;
+    color: white;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+/*dot selectors*/
+.slider__selectors {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #BDBDBD;
+    border-radius: 50%;
+    display: inline-block;
+}
+  
+.dot:hover {
+    background-color: #717171;
+}
+
+
+/*///////////   footer   ///////////*/
+/*ready to order*/
+#ready-to-order {
+    background-color: #F3323D;
+    height: 100px;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 5px;
+    color: #FFFFFF;
+} 
+
+.order__headline {
+    width: 400px;
+}
+
+.order__headline h2 {
+    line-height: normal;
+    text-align: center;
+}
+
+.order__text {
+    margin: 0 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.order__phone {
+    width: 750px;
+}
+
+#phone-icon {
+    float: left;
+}
+
+#number {
+    display: inline;
+    margin: 0px;
+}
+
+/*links*/
+
+.footer-heading {
+    max-width: 1050px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.footer-heading a {
+    display: block;
+    margin: 10px;
+}
+
+.copyright {
+    text-align: center;
+    color: #5A5A5A;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.social-media {
+    margin: 20px;
+    text-align: center;
+}
+
+.social-media__link {
+    margin: 10px 5px;
+}
+
+
+
+
+
+
+
