@@ -1,0 +1,469 @@
+/*//////////GENERAL//////////*/
+
+/*PAGE SETUP*/
+* {
+    /* Border: solid 1px blue; */
+    margin: 0;
+    padding: 0;
+    font-family: "sofia";
+}
+
+body {
+    background-color: #F2F2F2;
+}
+
+.container {
+    min-height: 100vh;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+/*HEADINGS*/
+
+
+h3 {
+    font-size: 30px;
+    margin: 30px 5px;
+}
+
+h4 {
+    font-size: 13px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*BUTTONS*/
+.btn {
+    width: 80px;
+    height: 30px;
+    border-radius: 10%;
+    border: none;
+    font-size: 12px;
+}
+
+.btn:active {
+    transform: translateY(4px);
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,0.24), 0 5px 13px 0 rgba(0,0,0,0.19)
+}
+
+.btn:focus {
+    outline: none;
+}
+
+/*LINKS*/
+a:active {
+    transform: translateY(4px);
+}
+
+/*SHARED CLASSES*/
+.flex-v {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-h {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+    align-content: space-around;
+}
+
+
+/*//////////NAV BAR//////////*/
+
+.head {
+    position: fixed;
+    height: 100%;
+    width: 130px;
+    background-color: #FFF;
+}
+
+/*USER INFO*/
+.nav li {
+    list-style: none;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.user {
+    border-bottom: solid 1px #ededed;
+    padding: 30px 0;
+    width: 100%;
+    height: 120px;
+}
+
+.name {
+    font-size: 16px;
+    padding: 10px 0;
+    color: #1B253A;
+}
+
+.location {
+    font-size: 16px;
+    color: 81848B;
+}
+
+/*NAV ICONS*/
+.nav__img {
+    color: #8686A5;
+}
+
+.nav__icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.nav__dash {
+    background-image: url(images/dash.png); 
+    background-repeat: no-repeat;
+}
+
+.nav__dash:hover {
+    background-image: url(images/dash-black.png);
+}
+
+.nav__market {
+    background-image: url(images/market.png); 
+}
+
+.nav__market:hover {
+    background-image: url(images/market-black.png);
+}
+
+.nav__time {
+    background-image: url(images/time.png); 
+}
+
+.nav__time:hover {
+    background-image: url(images/time-black.png);
+}
+
+.nav__user {
+    background-image: url(images/user.png); 
+}
+
+.nav__user:hover {
+    background-image: url(images/user-black.png);
+}
+
+.nav__settings {
+    background-image: url(images/settings.png); 
+}
+
+.nav__settings:hover {
+    background-image: url(images/settings-black.png);
+}
+
+.nav__notifications {
+    background-image: url(images/notifications.png); 
+}
+
+.nav__notifications:hover {
+    background-image: url(images/notifications-black.png);
+}
+
+/*/////////MAIN BODY//////////*/
+
+.main {
+    margin-left: 130px;
+    min-height: 100vh;
+    background-color: #F9F9FB;
+    padding: 0 100px;
+}
+
+/*//////////SUMMARY BOXES//////////*/
+.main__charts {
+    width: 100%;
+    padding-top:70px;
+    margin: 0 -10px;
+}
+
+.summary {
+    border-radius: 5%;
+    box-shadow: 1px 1px 2px #EAEAEA;
+}
+
+/*ACCOUNT BALANCE OVERVIEW*/
+.overview {
+    padding: 25px 35px 35px;
+    height: 170px;
+    width: 210px;
+    background-color: #FFBE2B;
+}
+
+.overview p {
+    font-size: 28px;
+    margin: 30px 0;
+}
+
+.overview__btn {
+    height: 60px;
+    width: 60px;
+    background-color: #FFBE28;
+    margin-right: 20px;
+}
+
+.overview__btn__add {
+    background-image: url(images/btn-add.png);
+}
+
+.overview__btn__cash {
+    background-image: url(images/btn-cash.png);
+}
+
+        /*//////////GRAPHS//////////*/
+
+
+
+
+/*CAMPAIGN PROFITABILITY*/
+
+.graph {
+    width: 330px;
+    height: 190px;
+    padding: 25px 25px 15px 25px;
+    background-color: white;
+}
+
+.ticks {
+    float: left;
+    position: relative;
+    height: 90%;
+    width: 10%;
+}
+
+.tick {
+    font-size: 12px;
+    font-style: italic;
+    color: #8087A3;
+    margin-top: 10px;
+    position: absolute;
+}
+
+.tick-1 {
+    top: 15px;
+}
+
+.tick-2 {
+    top: 48px;
+}
+
+.tick-3 {
+    top: 81px;
+}
+
+.tick-4 {
+    top: 114px;
+}
+
+.tick-5 {
+    top: 150px;
+}
+
+#profit-graph {
+    height: 175px;
+    width: 89%;
+}
+
+tbody {
+    height: 100%;
+}
+
+.bar__campaign {
+    height: 100%;
+    margin: 0 0 0 8px;
+    position: relative;
+    width: 12px;
+}
+
+.bar {
+    width: 4px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+}
+
+.spent {
+    background-color: #EE6645;
+    left: 0;
+}
+
+.paid {
+    background-color: #3C97F3;
+    right: 0;
+}
+
+
+/*//////////AVAILABLE CAMPAIGNS//////////*/
+
+.campaigns {
+    margin-top: 40px;
+    overflow-x: auto;
+}
+
+#campaign-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#campaign-title h3 {
+    width: 85%;
+}
+
+#grid-icon {
+    background-image: url(images/grid.png);
+    width: 20px;
+    height: 20px;
+}
+
+#list-icon {
+    background-image: url(images/list.png);
+    width: 20px;
+    height: 20px;
+    margin-right: 30px;
+}
+
+.table {
+    width: 1100px;
+    height: 500px;
+    border-spacing: 0 15px;
+    text-align: left;
+}
+
+th a {
+    color: #92959D;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: block;
+}
+
+/*sort ticks*/
+
+a.sort-by { 
+	position: relative;
+}
+
+a.sort-by:before,
+a.sort-by:after {
+	border: 4px solid transparent;
+	content: "";
+	display: block;
+	height: 0;
+	right: 5px;
+	top: 50%;
+	position: absolute;
+	width: 0;
+}
+a.sort-by:before {
+	border-bottom-color: #92959D;
+	margin-top: -9px;
+}
+a.sort-by:after {
+	border-top-color: #92959D;
+	margin-top: 1px;
+}
+
+.table-row {
+    background: #FFFFFF;
+    box-shadow: 1px 1px 2px #EAEAEA;
+    
+}
+
+.table-row:hover {
+    background-color: #f5f5f5;
+}
+
+td {
+    padding: 15px 0;
+}
+
+/*platform*/
+
+.platform {
+    padding-right: 40px;
+
+}
+
+.platform img {
+    margin-left: 25px;
+}
+
+/*campaign*/
+.campaign {
+    margin-right: 50px;
+    padding-right: 60px;
+}
+
+/*geo*/
+.geo {
+    padding-right: 60px;
+}
+
+/*profitability*/
+.profit {
+    padding-right: 40px;
+}
+
+.arrow {
+    margin: 0 6px;
+}
+
+.profit__up {
+    color: #219E6C;
+}
+
+.profit__down {
+    color: #F04735;
+}
+
+/*participation*/
+.participation {
+    text-align: left;
+    width: 275px;
+    padding-right: 35px;
+}
+
+/*status*/
+.status {
+    padding-right: 55px;
+}
+
+.btn__active {
+    background-color: #E9F5F1;
+    color: #219E6C;
+}
+
+.btn__inactive {
+    background-color: #EFEFEF;
+    color: #AAAAAA;
+}
+
+/*button*/
+.btn__expand {
+    width: 40px;
+    height: 40px;
+    border-radius: 25%;
+    border: solid 1px #EFEFEF;
+    background-color: #FFFFFF;
+    font-size: 30px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+}
+
+.btn__expand:hover {
+    background-color: #000000;
+    box-shadow: none;
+    color: #FFFFFF;
+}

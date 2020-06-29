@@ -1,0 +1,195 @@
+<!DOCTYPE = html>
+<html>
+<head>
+    <title>Social Media Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link href="normalized.css" rel="stylesheet" type="text/css">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <header class="head">
+            <nav class="nav flex-v">
+                <li class="user">
+                    <img src="images/profile.png">
+                    <h1 class="name">Dan P.</h1>
+                    <h2 class="location">New York</h2>
+                </li>
+                <li>
+                    <a class="nav__dash nav__icon" href=""></a>
+                </li>
+                <li>
+                    <a class="nav__market nav__icon" href=""></a>
+                </li>
+                <li>
+                    <a class ="nav__time nav__icon" href=""></a>
+                </li>
+                <li>
+                    <a class="nav__user nav__icon" href=""></a>
+                </li>
+                <li>
+                    <a class="nav__settings nav__icon" href=""></a>
+                </li>
+                <li>
+                    <a class="nav__notifications nav__icon" href=""></a>
+                </li>
+            </nav>
+        </header>
+        <main class="main">
+            <div class="main__charts flex-h">
+                <div class="overview summary">
+                    <h4>Account Balance</h4>
+                    <p class="balance">$50,150.00</p>
+                    <button class="btn overview__btn overview__btn__add"></button>
+                    <button class="btn overview__btn overview__btn__cash"></button>
+                </div>
+                <div class="graph summary" id="profitability">
+                    <h4 class="caption">Campaign Profitability</h4>
+                    <div class="ticks">
+                        <div class="tick tick-1"><p>800</p></div>
+                        <div class="tick tick-2"><p>600</p></div>
+                        <div class="tick tick-3"><p>400</p></div>
+                        <div class="tick tick-4"><p>200</p></div>
+                        <div class="tick tick-5"><p>0</p></div>
+                    </div>
+                    <table id="profit-graph">
+                        <tbody class="flex-h">
+                            <tr class="bar__campaign" id="bar-all">
+                                <td class="spent bar" id="850" style="height:120px;"></td>
+                                <td class="paid bar" id="300" style="height:40px;"></td>
+                            </tr>
+                            <tr class="bar__campaign" id="bar-candycrush">
+                                <td class="spent bar" id="500" style="height:70px;"></td>
+                                <td class="paid bar" id="650" style="height:100px;"></td>
+                            </tr>
+                            <tr class="bar__campaign" id="bar-kayak">
+                                <td class="spent bar" id="700" style="height:105px;"></td>
+                                <td class="paid bar" id="100" style="height:5px;"></td>
+                            </tr>
+                            <tr class="bar__campaign" id="bar-aliex-se">
+                                <td class="spent bar" id="550" style="height:75px;"></td>
+                                <td class="paid bar" id="350" style="height:35px;"></td>
+                            </tr>
+                            <tr class="bar__campaign" id="bar-ikea">
+                                <td class="spent bar" id="300" style="height:30px;"></td>
+                                <td class="paid bar" id="500" style="height:70px;"></td>
+                            </tr>
+                            <tr class="bar__campaign" id="bar-amazon">
+                                <td class="spent bar" id="600" style="height:85px;"></td>
+                                <td class="paid bar" id="350" style="height:35px;"></td>
+                            </tr>
+                            <tr class="bar__campaign" id="bar-aliex-uk">
+                                <td class="spent bar" id="300" style="height:30px;"></td>
+                                <td class="paid bar" id="500" style="height:70px;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> <!--end profitability-->
+
+                <div class="graph summary">
+                    <h4 class="caption">Overall Agency Profitability</h4>
+                    <div class="ticks">
+                        <div class="tick tick-1"><p>80k</p></div>
+                        <div class="tick tick-2"><p>60k</p></div>
+                        <div class="tick tick-3"><p>40k</p></div>
+                        <div class="tick tick-4"><p>20k</p></div>
+                        <div class="tick tick-5"><p>0</p></div>
+                    </div>
+                    <div id="agent-profitability" style="height: 85%; width: 90%; margin-top:20px;"></div>
+                </div> <!--end agent-profitability-->
+            </div> <!--end main__charts-->
+            
+            <div class="campaigns">
+                <div id="campaign-title">
+                    <h3>Available Campaigns</h3>
+                    <button class="btn" id="grid-icon"></button>
+                    <button class="btn" id="list-icon"></button>
+                </div>
+                
+                <table class="table">
+                    <colgroup>
+                        <col style="width:15%">
+                        <col style="width:15%;">
+                        <col style="width:10%">
+                        <col style="width:15%">
+                        <col style="width:26%">
+                        <col style="width:12%">
+                        <col style="width:7%">
+                    </colgroup>
+                    <tbody>
+                    <tr class="table-head">
+                        <th class="platform"><a class="sort-by" href="">Ad Platform</a></th>
+                        <th class="campaign"><a class="sort-by" href="">Campaign</a></th>
+                        <th class="geo"><a class="sort-by" href="">GEO</a></th>
+                        <th class="profit"><a class="sort-by" href="">Profitability</a></th>
+                        <th class="participation"><a class="sort-by" href="">Max Participation Available</a></th>
+                        <th class="status"><a class="sort-by" href="">Status</a></th>
+                    </tr>
+                    <tr class="candy-crush table-row">
+                        <td class="platform"><img src="images/facebook.png"></td>
+                        <td class="campaign">CandyCrush</td>
+                        <td class="geo">UK</td>
+                        <td class="profit profit__up"><img class="arrow" src="images/arrow-green.png">35.2%</td>
+                        <td class="participation">$5,486</td>
+                        <td class="status"><button class="btn btn__active">ACTIVE</button></td>
+                        <td><button class="btn btn__expand">+</button></td>
+                    </tr>
+                    <tr class="kayak table-row">
+                        <td class="platform"><img src="images/youtube.png"></td>
+                        <td class="campaign">Kayak</td>
+                        <td class="geo">DE</td>
+                        <td class="profit profit__down"><img class="arrow" src="images/arrow-red.png">5.0%</td>
+                        <td class="participation">$2,592</td>
+                        <td class="status"><button class="btn btn__active">ACTIVE</button></td>
+                        <td><button class="btn btn__expand">+</button></td>
+                    </tr>
+                    <tr class="aliexpress-se table-row">
+                        <td class="platform"><img src="images/twitter.png"></td>
+                        <td class="campaign">Aliexpress</td>
+                        <td class="geo">SE</td>
+                        <td class="profit profit__up"><img class="arrow" src="images/arrow-green.png">21.3%</td>
+                        <td class="participation">$1,268</td>
+                        <td class="status"><button class="btn btn__active">ACTIVE</button></td>
+                        <td><button class="btn btn__expand">+</button></td>
+                    </tr>
+                    <tr class="ikea table-row">
+                        <td class="platform"><img src="images/instagram.png"></td>
+                        <td class="campaign">Ikea</td>
+                        <td class="geo">DE</td>
+                        <td class="profit profit__down"><img class="arrow" src="images/arrow-red.png">4.4%</td>
+                        <td class="participation">$7,467</td>
+                        <td class="status"><button class="btn btn__active">ACTIVE</button></td>
+                        <td><button class="btn btn__expand">+</button></td>
+                    </tr>
+                    <tr class="amazon table-row">
+                        <td class="platform"><img src="images/twitter.png"></td>
+                        <td class="campaign">Amazon.com</td>
+                        <td class="geo">ES</td>
+                        <td class="profit profit__up"><img class="arrow" src="images/arrow-green.png">82.3%</td>
+                        <td class="participation">$5,210</td>
+                        <td class="status"><button class="btn btn__inactive">INACTIVE</button></td>
+                        <td><button class="btn btn__expand">+</button></td>
+                    </tr>
+                    <tr class="aliexpress-uk table-row">
+                        <td class="platform"><img src="images/youtube.png"></td>
+                        <td class="campaign">Aliexpress</td>
+                        <td class="geo">UK</td>
+                        <td class="profit profit__up"><img class="arrow" src="images/arrow-green.png">44.1%</td>
+                        <td class="participation">$4,811</td>
+                        <td class="status"><button class="btn btn__inactive">INACTIVE</button></td>
+                        <td><button class="btn btn__expand">+</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div> <!--end campaigns-->
+        </main>
+
+    </div> <!--end container-->
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
