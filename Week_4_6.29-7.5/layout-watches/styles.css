@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300&family=Lora:ital@1&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.small-width {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.medium-width {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+p {
+    font-weight: 300;
+}
+
+blockquote {
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    line-height: 25px;
+    color: #777777;
+    margin: 0;
+}
+
+.btn {
+    background-color: #FEB648;
+    width: 200px;
+    height: 50px;
+    color: white;
+    font-weight: 200;
+    border-radius: 25px 25px;
+    box-shadow: 0 9px 14px #FFDAA3;
+    border: none;
+}
+
+.btn:active {
+    transform: translateY(4px)
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+/*//////////NAVIGATION BAR//////////*/
+/*general*/
+
+.nav {
+    text-transform: uppercase;
+}
+
+.nav li {
+    list-style: none; 
+}
+
+.nav a {
+    font-size: 13px;
+    color: black;
+    text-decoration: none;
+}
+
+.nav__item {
+    text-align: center;
+    font-weight: 700;
+}
+
+/*header*/
+
+.nav__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    width:60%;
+}
+
+/*//////////main slider//////////*/
+.slider {
+    padding: 100px 50px 125px;
+}
+
+.slider__image {
+    float: left;
+}
+
+.slider__text {
+    padding-left: 350px;
+    padding-top: 30px;
+}
+
+.slider__text p {
+    font-size: 20px;
+}
+
+/*//////////CORE FEATURES//////////*/
+
+.features {
+    position: relative
+}
+
+.features__list {
+    margin: 100px 0;
+    display: grid;
+    grid-template-columns: 325px 325px;
+    grid-column-gap: 350px;
+    grid-template-rows: 100px 100px 100px;
+    grid-row-gap: 50px;
+}
+
+.feature__item h3 {
+    margin: 10px 0;
+}
+
+.feature__item p {
+    margin: 0;
+}
+
+.feature__image {
+    position: absolute;
+    top: 20%;
+    left: 50%; 
+    margin-left: -120px;
+}
+
+
+/*//////////DIV ABOUT BENEFITS//////////*/
+
+.benefits {
+    background-color: #FDA920;
+    max-width: 1450px;
+}
+
+.benefits__img {
+    float: left;
+    margin: 95px 75px 95px 220px;
+}
+
+.benefits__text {
+    padding: 125px 220px 0 0;
+}
+
+.benefits__text h2 {
+    text-align: left;
+    color: white;
+}
+
+.benefits__text p {
+    margin-top: 50px;
+    color: white;
+}
+
+/*//////////WHY CHOOSE APPLE WATCH//////////*/
+
+.choose h2 {
+    padding: 30px 0;
+}
+
+.choose p {
+    font-weight: 400;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.reason-1__img {
+    float: left;
+    padding-left: 30px;
+}
+
+.reason-2__img {
+    float: right;
+    padding-right: 75px;
+}
+
+#reason-text-1 {
+    padding: 50px 0 50px 500px;
+}
+
+#reason-text-2 {
+    padding: 50px 500px 50px 0;
+}
+
+/*//////////PICTURE SHOTS//////////*/
+
+.pictures {
+    padding-top: 50px;
+}
+
+.pictures h2 {
+    padding-bottom: 50px;
+}
+
+.photo-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*//////////GET PRODUCT UPDATES//////////*/
+
+.updates {
+    height: 320px;
+    position: relative;
+    margin: 100px 0 75px;
+}
+
+.updates__block {
+    position: absolute;
+    top: 0;
+}
+
+.background-image {
+    background-image: url(images/watch-background.png);
+    filter: brightness(30%);
+    width: 100%;
+    height: 100%;
+}
+
+.updates__text {
+    z-index: 1;
+    width: 500px;
+    left: 50%;
+    margin: 50px 0 0 -250px;
+}
+
+.updates h2 {
+    color: white;
+    font-size: 31px;
+    font-weight: 400;
+    margin: 40px 0 15px;
+}
+
+.updates p {
+    color: white;
+    margin: 0 0 10px
+}
+
+form {
+    position: relative;
+    height: 50px;
+}
+
+.subscribe__email {
+    width: 328px;
+    height: 50px;
+    border-radius: 25px 0 0 25px;
+    position: absolute;
+    left: 0;
+    padding-left: 40px;
+    font-size: 14px;
+    border: none;
+}
+
+.subscribe__email:focus {
+    outline: none;
+}
+
+#subscribe-btn {
+    width: 130px;
+    border-radius: 0 25px 25px 0;
+    height: 52px;
+    box-shadow: none;
+    position: absolute;
+    right: 0;
+}
+
+/*//////////REVIEWS//////////*/
+
+.reviews {
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+.reviews h2 {
+    margin-bottom: 150px;
+}
+
+.review {
+    max-width: 325px;
+}
+
+.reviews__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.review img {
+    padding: 25px 0 5px;
+}
+
+.review__name {
+    color: #242424;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.review__title {
+    color: #242424;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+/*//////////FOOTER//////////*/
+
+footer {
+    background-color: #F4F4F4;
+    height: 110px;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer__content {
+    max-width: 325px;
+    margin: 0 auto;
+}
+
+.footer__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.footer__item {
+    color: black;
+    font-weight: 600;
+}
+
+.copyright {
+    font-size: 11px;
+    color: black;
+    font-weight: 400;
+}

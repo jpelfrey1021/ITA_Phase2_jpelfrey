@@ -1,0 +1,93 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>CSS Exercise 3</title>
+<meta name="description" content="ITA CSS Layout Exercise">
+<meta name="author" content="Mark Kroh">
+
+<style>
+    .container {
+        height: 240px;
+  		width: 240px;
+  		background-color: white;
+      	position: relative;
+      	margin: 0 auto;
+  	}
+
+  	.interior {
+   		height: 100px;
+  		width: 100px;
+      	margin: 10px;
+      	position: absolute;
+  	}
+
+    .div1,.div2,.div3,.div4 {
+      	background-color: blue;
+    }
+
+    .div5 {
+      	background-color: red;
+    }
+
+    .div1 {
+      	top: 0;
+      	left: 0;
+    }
+
+    .div2 {
+      	top: 0;
+      	right: 0;
+    }
+
+    .div3 {
+      	bottom: 0;
+      	left: 0;
+    }
+
+    .div4 {
+      	bottom: 0;
+      	right: 0;
+    }
+
+   .div5 {
+   		transform: rotate(45deg);
+        top:  50%;
+        margin-top: -50px;
+           left: 50%;
+           margin-left: -50px;
+   }
+   
+    .div5::after {
+		width: 30px;
+        height: 30px;
+        content: "\2605"; /*star icon*/
+        font-size: 16px; /*increase icon size*/
+        text-align: center; /*align icon center*/
+        line-height: 30px; /*align icon in middle top to bottom. line height same as the div*/
+    	transform: rotate(-45deg); /*unrotate it based on the roteted red div*/
+    	background: white;
+        border-radius: 50%; /*make it a circle*/
+        /*position circle in the middle*/
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -15px;
+        margin-top: -15px;
+    }
+
+</style>
+</head>
+<body>
+	<!-- Do not touch the HTML please -->
+	<div class="container">
+		<div class="interior div1"></div>
+		<div class="interior div2"></div>
+		<div class="interior div3"></div>
+		<div class="interior div4"></div>
+		<div class="interior div5"></div>
+	</div>
+</body>
+</html>
