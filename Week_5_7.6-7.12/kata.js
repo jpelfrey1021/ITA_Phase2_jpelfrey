@@ -1,4 +1,4 @@
-//Maximum Length Difference
+//1. Maximum Length Difference
 function mxdiflg(a1, a2) {
     //if array is empty return -1 and stop
     if (a1 == 0 || a2 == 0) {
@@ -42,6 +42,3 @@ function mxdiflg(a1, a2) {
         return option2
     }
 }
-
-
-//ignore this comment

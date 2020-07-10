@@ -1,0 +1,152 @@
+/*////////General//////////*/
+
+/*general set-up and tags*/
+* {
+    /* border: solid 1px white; */
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #4953CF;
+    color: white;
+}
+
+.container {
+    padding: 0 15%;
+}
+
+/*text elements*/
+p {
+    font-weight: 300;
+}
+
+/*links and buttons*/
+.btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    margin: 50px 0;
+    font-weight: 500;
+}
+
+.form__field:hover, .form__field:focus, .form__field:active, a:hover, a:focus, a:active, .btn:hover, .btn:focus{
+    box-shadow: 0 0 5px 5px #48CFC6;
+    outline: none;
+}
+
+.btn:hover, .btn:focus, a:hover, a:focus, a:active {
+    text-decoration: underline;
+}
+
+.btn:active {
+    transform: translateY(4px);
+}
+
+a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/*header*/
+.logo {
+    height: 15%;
+    width: 15%;
+    display: inline-block;
+}
+
+h1 {
+    display: inline-block;
+    margin: 0 5%;
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+header {
+    margin: 35% 0 0;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.tagline {
+    margin: 10% 0 0;
+    font-weight: 400;
+}
+
+/*form*/
+#sign-up {
+    margin: 25px 0;
+}
+
+.input-group {
+    position: relative;
+}
+
+input::placeholder {
+    color: #E0E1F7;
+}
+
+.form__field {
+    padding: 0 15%;
+    background-color: #646DD6;
+    height: 40px;
+    width: 70%;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.icon {
+    position: absolute;
+    color: #E0E1F7;
+    font-size: 25px;
+    line-height: 60px;
+    padding: 0 2%;
+}
+
+
+
+
+/*//////////Sign Up Page//////////*/
+
+.icon-danger {
+    color:black;
+    position: absolute;
+    right: 0;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.birthday-dropdown {
+    width: 30%;
+    padding: 5px;
+    color: #E0E1F7;
+}
+
+.label-birthday {
+    display: block;
+    margin: 15px 0 5px;
+}
+
+
+
+
+/*//////////Sign In Page//////////*/
+.forgot-pw {
+    float: right;
+}
+
+#sign-in {
+    margin-top: 120px;
+}

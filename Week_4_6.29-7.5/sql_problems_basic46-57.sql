@@ -344,4 +344,3 @@ FROM
     NextOrderDate
 WHERE
     DATEDIFF(NextOrderDate, InitialOrderDate) <= 5;
-
