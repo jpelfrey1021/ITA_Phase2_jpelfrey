@@ -11,6 +11,7 @@ body {
   color: white;
   max-width: 750px;
 }
+
 body p {
   font-weight: 300;
 }
@@ -26,11 +27,14 @@ body p {
   margin: 50px 0;
   font-weight: 500;
 }
-.btn:hover, .btn:focus {
+
+.btn:hover,
+.btn:focus {
   text-decoration: underline;
   box-shadow: 0 0 5px 5px #48CFC6;
   outline: none;
 }
+
 .btn:active {
   transform: translateY(4px);
 }
@@ -40,7 +44,10 @@ a {
   font-weight: 600;
   text-decoration: none;
 }
-a:hover, a:focus, a:active {
+
+a:hover,
+a:focus,
+a:active {
   text-decoration: underline;
   box-shadow: 0 0 5px 5px #48CFC6;
   outline: none;
@@ -49,20 +56,24 @@ a:hover, a:focus, a:active {
 header {
   margin: 35% 0 0;
 }
+
 header .title {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+
 header .tagline {
   margin: 10% 0 0;
   font-weight: 400;
 }
+
 header .logo {
   height: 15%;
   width: 15%;
   display: inline-block;
 }
+
 header h1 {
   display: inline-block;
   margin: 0 5%;
@@ -84,10 +95,14 @@ header h1 {
   border-radius: 8px;
   margin: 10px 0;
 }
-.form__field:hover, .form__field:focus, .form__field:active {
+
+.form__field:hover,
+.form__field:focus,
+.form__field:active {
   box-shadow: 0 0 5px 5px #48CFC6;
   outline: none;
 }
+
 .form__field::placeholder {
   color: #E0E1F7;
 }
@@ -116,6 +131,7 @@ header h1 {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .bd-controls .birthday-dropdown {
   width: 30%;
   padding: 5px;
@@ -131,6 +147,7 @@ header h1 {
 #sign-in {
   margin-top: 120px;
 }
+
 #sign-in .forgot-pw {
   float: right;
 }
@@ -139,18 +156,22 @@ header h1 {
 .main-header {
   margin: 50px 0 75px;
 }
+
 .main-header nav {
   text-align: right;
 }
+
 .main-header nav ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
 }
+
 .main-header nav ul li {
   list-style: none;
 }
+
 .main-header nav ul li .nav__link {
   display: inline-block;
   height: 30px;
@@ -163,9 +184,11 @@ header h1 {
   justify-content: center;
   align-items: center;
 }
+
 .main-header nav ul li .nav__link .nav-icon {
   font-size: 18px;
 }
+
 .main-header h1 {
   width: 80%;
   font-weight: 500;
@@ -182,6 +205,7 @@ header h1 {
 .question-options {
   position: relative;
 }
+
 .question-options .q-btn {
   background-color: #4953CF;
   color: white;
@@ -195,13 +219,16 @@ header h1 {
   line-height: 17px;
   margin: 20px 0;
 }
-.question-options .q-btn:hover, .question-options .q-btn:focus {
+
+.question-options .q-btn:hover,
+.question-options .q-btn:focus {
   background: white;
   text-decoration: none;
   color: #1B2166;
   font-weight: 500;
   box-shadow: none;
 }
+
 .question-options .q-icon {
   display: block;
   position: absolute;
@@ -223,26 +250,31 @@ header h1 {
   padding: 15% 7% 10%;
   text-align: center;
 }
+
 .welcome-slider h1 {
   color: #313670;
   text-align: left;
   width: 90%;
   line-height: 35px;
 }
+
 .welcome-slider img {
   height: 200px;
   padding: 35px 0 50px;
 }
+
 .welcome-slider h2 {
   color: #535353;
   text-align: left;
   font-size: 18px;
   padding-bottom: 10px;
 }
+
 .welcome-slider p {
   color: #535353;
   line-height: 22px;
 }
+
 .welcome-slider button {
   margin-bottom: 0;
   background-color: #373FA3;
@@ -259,7 +291,8 @@ header h1 {
   display: inline-block;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   width: 20px;
   border-radius: 20px;
 }
@@ -268,10 +301,12 @@ header h1 {
   text-align: center;
   line-height: 50px;
 }
+
 .welcome-text :first-child {
   background-color: white;
   color: #313670;
 }
+
 .welcome-text .welcome-btn {
   display: block;
   margin: 5px 0;
@@ -320,12 +355,16 @@ header h1 {
   width: 100%;
   bottom: 0%;
 }
+
 .main-footer .menu-icon {
   font-size: 30px;
   color: #9EA1CA;
   padding: 0;
 }
-.main-footer .menu-icon:hover, .main-footer .menu-icon:focus, .main-footer .menu-icon:active {
+
+.main-footer .menu-icon:hover,
+.main-footer .menu-icon:focus,
+.main-footer .menu-icon:active {
   box-shadow: none;
   color: #373FA3;
 }
@@ -336,7 +375,10 @@ header h1 {
   width: 40px;
   background-image: url(images/saving-setting-light.png);
 }
-.menu-icon-image:hover, .menu-icon-image:focus, .menu-icon-image:active {
+
+.menu-icon-image:hover,
+.menu-icon-image:focus,
+.menu-icon-image:active {
   background-image: url(images/saving-setting-dark.png);
 }
 
