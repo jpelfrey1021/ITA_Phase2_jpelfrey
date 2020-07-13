@@ -7,7 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="normalize.css" rel="stylesheet" type="text/css">
-    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/compiled.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div class="container"> 
@@ -19,7 +20,7 @@
             <p class="tagline">Chip Away Student Debt Smarter & Faster?</p>
         </header>
         <main>
-            <form id="sign-up">
+            <form id="sign-up" action="questionnaire.html">
                 <div class="input-group">
                     <i class="fa fa-user icon" aria-hidden="true"></i>
                     <input type="text" placeholder="First Name" name="first" class="form__field" aria-label="first name">
@@ -39,7 +40,7 @@
                     <input type="text" placeholder="Phone" name="phone" class="form__field" aria-label="phone">
                 </div>
                 <label for="birthday" class="label-birthday">Birthday</label>
-                <div class="controls">
+                <div class="bd-controls">
                     <select name="dob-month" id="dob-month" aria-label="birth month" class="birthday-dropdown form__field">
                         <option value="">Month</option>
                         <option value="">-----</option>
@@ -209,7 +210,7 @@
                     </select>
                 </div>
 
-                <button class="btn">Create Account</button>
+                <button type="submit" class="btn">Create Account</button>
                 <p>Already have an account? <a href="signIn.html">Sign in</a></p>
             </form>
         </main>
