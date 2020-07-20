@@ -1,12 +1,12 @@
 {
-  "name": "layout",
+  "name": "layout-app",
   "version": "1.0.0",
-  "description": "landing page for layout stuff",
-  "main": "index.js",
+  "description": "second installation",
+  "main": "script.js",
   "scripts": {
     "compile:sass": "node-sass sass/styles.scss css/styles.css"
   },
-  "author": "jessica",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.14.1"
