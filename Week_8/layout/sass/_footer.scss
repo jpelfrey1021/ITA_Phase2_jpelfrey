@@ -1,0 +1,51 @@
+/*used once logged into the main site.
+Pages include:
+    dashboard
+    transactions
+    saving settings
+    pool
+    settings
+*/
+
+.main-footer {
+    border-radius: 35px;
+    background-color: #F1F1F1;
+    height: 100px;
+    width: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+
+    .menu-icon {
+        font-size: 22px;
+        color: #9EA1CA;
+        padding: 0;
+
+        &:hover,
+        &:focus,
+        &:active {
+            box-shadow: none;
+            color: $button-dark-purple;
+        }
+    }
+
+    //saving settings because an icon didn't exist. switches pic on hover to darker version
+    .menu-icon-image {
+        display: block;
+        height: 30px;
+        width: 30px;
+        background-image: url(../images/saving-setting-light.png);
+        background-size: contain;
+    
+        &:hover,
+        &:focus,
+        &:active {
+            background-image: url(../images/saving-setting-dark.png);
+        }
+    }
+}

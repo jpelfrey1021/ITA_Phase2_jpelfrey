@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome to Chipper</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container container-main"> 
+        <main>
+            <div class="welcome-slider slideshow-container">
+                <div id="welcome1" class="mySlides">
+                    <h1 class="welcome-header">Welcome to Chipper</h1>
+                    <img src="images/welcome1.png" alt="two people doing a high-five">
+                    <p>
+                        Chipper is your student loan sidekick! We use powerful technology 
+                        and a team of human experts to help you craft the perfect repayment 
+                        plan and automate payments based on your unique budget.
+                    </p>
+                    <button class="btn next" onclick="plusSlides(1)">Next</button>
+                </div> <!--end welcome1-->
+                <div id="welcome2" class="mySlides">
+                    <h1 class="welcome-header">How we help you?</h1>
+                    <img src="images/welcome2.png" alt="two people doing a high-five">
+                    <h2>Round-Ups</h2>
+                    <p>
+                        We Round-Up each transaction to the nearest dollar, and use the change to send as a payment to your lender.
+                    </p>
+                    <button class="btn next" onclick="plusSlides(1)">Next</button>
+                </div> <!--end welcome2-->
+                <div id="welcome3" class="mySlides">
+                    <h1 class="welcome-header">How we help you?</h1>
+                    <img src="images/welcome3.png" alt="two people doing a high-five">
+                    <h2>One-Time Payments</h2>
+                    <p>
+                        You can use our one-time payment feature to select the preferred amount you want to send! We'll handle the rest!
+                    </p>
+                    <button class="btn next" onclick="plusSlides(1)">Next</button>
+                </div> <!--end welcome3-->
+                <div id="welcome4" class="mySlides">
+                    <h1 class="welcome-header">How we help you?</h1>
+                    <img src="images/welcome4.png" alt="two people doing a high-five">
+                    <h2>Chipper Boost</h2>
+                    <p>
+                        Set up recurring monthly payments on the day that best accommodates you! You have complete flexibility on the amount you’d like to spend toward your loan
+                    </p>
+                    <button class="btn next" onclick="plusSlides(1)">Next</button>
+                </div> <!--end welcome4-->
+                <div id="welcome5" class="mySlides">
+                    <h1 class="welcome-header">Ready to Chip Away Your Student Debt?</h1>
+                    <img src="images/welcome5.png" alt="two people doing a high-five">
+                    <p>
+                        Chipper’s mission is to provide clarity and control so you can feel empowered to live financially free. We believe student debt does not have to inhibit your dreams! Start chipping and dreaming again!
+                    </p>
+                </div> <!--end welcome5-->
+            </div>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+            <div class="welcome-text">
+                <a class="btn welcome-btn" href="signUp.html">Sign Up</a>
+                <a class="btn welcome-btn" href="signIn.html">Sign In</a>
+            </div>
+        </main>
+    </div> <!--end container-->
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
