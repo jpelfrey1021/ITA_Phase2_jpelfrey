@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Welcome to Chipper</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="main-site">
+    <div class="container main-site-container">
+        <header class="main-site-header main-site-header--mediumheight" id="poolHeader">
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <img class="setup-status" src="images/setup checklist.png" alt="setup: completed 3 of 6">
+                    </li>
+                    <li>
+                        <a class="nav__link" href="" aria-label="Help"><i class="fa fa-question nav-icon"></i></a>
+                    </li>
+                    <li>
+                        <a class="nav__link" href="" aria-label="Message us"><i
+                                class="fa fa-comment nav-icon"></i></i></a>
+                    </li>
+                </ul>
+            </nav>
+            <h1 class="main-site-h2--large">Chipper Pool</h1>
+            <div class="pool-summary">
+                    <div class="pool-summary__amount">
+                        <p class="pool__value--dollar">$</p>
+                        <p class="pool__value--main">300</p>
+                    </div>
+                    <p class="pool-summary__text">Your Pool</p>    
+            </div>
+            <div class="month-slider">
+                <span class="month-slide month--hidden">Apr</span>
+                <span class="month-slide month--left">May</span>
+                <span class="month-slide month--active">June</span>
+                <span class="month-slide month--right">July</span>
+                <span class="month-slide month--hidden">Aug</span>
+
+                <button class="month-slider__btn btn--left arrow__icon" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="month-slider__btn btn--right arrow__icon" onclick="plusDivs(1)">&#10095;</button>
+            </div>
+        </header>
+        <main class="main-site-main ontop-main" id="poolMain">
+            <button onclick="expandPage();" class="expand__page arrow__icon"><i class="fa fa-angle-up" aria-hidden="true"></i></button>
+            <div class="pool_type">
+                <button onclick= "showElement('poolTotal', 'poolRecurring', 'poolOnetime');" class="btn pool_type-btn">All</button>
+                <button onclick= "showElement('poolRecurring', 'poolOnetime', 'poolTotal');" class="btn pool_type-btn">Recurring</button>
+                <button onclick= "showElement('poolOnetime', 'poolTotal', 'poolRecurring');" class="btn pool_type-btn">One-Time</button>
+            </div>
+            <ul id="poolTotal">
+                <li class="general__list-item">
+                    <h2 class="h2__pool">Pool Total</h2>
+                    <h2 class="h2__pool">$150</h2>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Mom</a>
+                    <p class = "general__list-item-details">Recurring</p>
+                    <p class="general__list-item-price">$100</p>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title" >Grandma</a>
+                    <p class = "general__list-item-details">Recurring</p>
+                    <p class="general__list-item-price">$100</p>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Bobby</a>
+                    <p class = "general__list-item-details">Recurring</p>
+                    <p class="general__list-item-price">$50</p>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Wendy</a>
+                    <p class = "general__list-item-details">One Time</p>
+                    <p class="general__list-item-price">$50</p>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Mary</a>
+                    <p class = "general__list-item-details">One Time</p>
+                    <p class="general__list-item-price">$10</p>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Susy</a>
+                    <p class = "general__list-item-details">One Time</p>
+                    <p class="general__list-item-price">$30</p>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Aunt Carol</a>
+                    <p class = "general__list-item-details">One Time</p>
+                    <p class="general__list-item-price">$75</p>
+                </li>
+            </ul>
+            <ul id="poolRecurring" class="hidden">
+                <li class="general__list-item">
+                    <h2 class="h2__pool">Recurring Total</h2>
+                    <h2 class="h2__pool">$250</h2>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Mom</a>
+                    <p class="general__list-item-price">$100</p>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title" >Grandma</a>
+                    <p class="general__list-item-price">$100</p>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Bobby</a>
+                    <p class="general__list-item-price">$50</p>
+                </li>
+            </ul>
+            <ul id="poolOnetime" class="hidden">
+                <li class="general__list-item">
+                    <h2 class="h2__pool">One-Time Total</h2>
+                    <h2 class="h2__pool">$50</h2>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Wendy</a>
+                    <p class="general__list-item-price">$50</p>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Mary</a>
+                    <p class="general__list-item-price">$10</p>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Susy</a>
+                    <p class="general__list-item-price">$30</p>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Aunt Carol</a>
+                    <p class="general__list-item-price">$75</p>
+                </li>
+            </ul>
+            <button class="btn pool_invite-btn">Invite People</button>
+        </main>
+        <footer class="main-footer">
+            <a href="dash.html" class="menu-link"><i class="fa fa-home menu-icon" aria-label="home"></i></a>
+            <a href="transaction.html" class="menu-link"><i class="fa fa-refresh menu-icon"
+                    aria-label="transactions"></i></a>
+            <a href="savesettings.html" class="menu-link menu-icon menu-icon-image" aria-label="saving settings"></a>
+            <a href="pool.html" class="menu-link"><i class="fa fa-users menu-icon" aria-label="pool"></i></a>
+            <a href="settings.html" class="menu-link"><i class="fa fa-cog menu-icon" aria-label="settings"></i></a>
+        </footer>
+    </div>
+    <!--end container-->
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>

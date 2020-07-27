@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Welcome to Chipper</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="main-site">
+    <div class="container main-site-container">
+        <header class="main-site-header dash-header">
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <h1 class="dash-heading">Hello! Chuck</h1>
+                    </li>
+                    <li>
+                        <img class="setup-status" src="images/setup checklist.png" alt="setup: completed 3 of 6">
+                    </li>
+                    <li>
+                        <a class="nav__link" href="" aria-label="Help"><i class="fa fa-question nav-icon"></i></a>
+                    </li>
+                    <li>
+                        <a class="nav__link" href="" aria-label="Message us"><i
+                                class="fa fa-comment nav-icon"></i></i></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="savings-group">
+                <p class="dollar-sign">$</p>
+                <p class="savings">180</p>
+                <p class="heading-text">Chipped this month</p>
+            </div>
+
+            <p class="heading-text">At this pace you will <strong>save X</strong> on interest and <strong>repay in
+                    X</strong> years</p>
+            <div class="saved-menu">
+                <div class="saved__item saved__item-grey">
+                    <h2>Round-Ups</h2>
+                    <p class="saved__item-amount">$50</p>
+                    <p>Saved this month</p>
+                    <i class="fa fa-circle dot-active" aria-hidden="true"></i>
+                </div>
+                <div class="saved__item">
+                    <h2>Boost</h2>
+                    <p class="saved__item-amount">$120</p>
+                    <p>Saved this month</p>
+                </div>
+                <div class="saved__item saved__item-grey">
+                    <h2>One-Time</h2>
+                    <p class="saved__item-amount">$30</p>
+                    <p>Saved this month</p>
+                </div>
+            </div>
+        </header>
+        <main class="main-site-main dash-main">
+            <div id="paymentDisplay">
+                <h2 class="h2">Round-Ups</h2>
+                <div class="times">
+                    <div id="roundup__timeframe">
+                        <p id="chosen-time">This Week</p>
+                        <a onclick="showTimeFrames()" aria-label="change time frame"><i class="fa fa-angle-down"
+                                aria-hidden="true"></i></a>
+                    </div>
+                    <ul id="timeframe__menu">
+                        <li class="active-time"><a onclick="updateTime(this.id)" id="This Week">This Week</a></li>
+                        <li><a onclick="updateTime(this.id)" id="Last Week">Last Week</a></li>
+                        <li><a onclick="updateTime(this.id)" id="This Month">This Month</a></li>
+                        <li><a onclick="updateTime(this.id)" id="Last Month">Last Month</a></li>
+                        <li><a onclick="updateTime(this.id)" id="Custom">Custom</a></li>
+                    </ul>
+                </div>
+                <div class="round-up__graph" id="chartContainer" style="height: 200px; width: 100%;">
+                </div>
+            </div>
+            <form action="" id="makePayment">
+                <button type="button" class="btn dash-btn" onclick="displayPayment()">Make a one time payment</button>
+            </form>
+            <form action="" id="linkAccount">
+                <button type="button" class="btn dash-btn" onclick="displayPayment(true)">Link Your Loan Accounts</button>
+            </form>
+        </main>
+        <footer class="main-footer">
+            <a href="dash.html" class="menu-link"><i class="fa fa-home menu-icon" aria-label="home"></i></a>
+            <a href="transaction.html" class="menu-link"><i class="fa fa-refresh menu-icon" aria-label="transactions"></i></a>
+            <a href="savesettings.html" class="menu-link menu-icon menu-icon-image" aria-label="saving settings"></a>
+            <a href="pool.html" class="menu-link"><i class="fa fa-users menu-icon" aria-label="pool"></i></a>
+            <a href="settings.html" class="menu-link"><i class="fa fa-cog menu-icon" aria-label="settings"></i></a>
+        </footer>
+    </div>
+    <!--end container-->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/dashboard-chart.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+
+</html>

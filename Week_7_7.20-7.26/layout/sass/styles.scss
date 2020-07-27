@@ -1,0 +1,687 @@
+$background: #4953CF;
+$form-bkg: #646DD6;
+$text-light: #E0E1F7;
+$color-purple: #1B2166;
+$nav-icon: #EFEFF8;
+$icon-bkg: #5c65db;
+$grey: #535353;
+$purple-text: #313670;
+$button-dark-purple: #373FA3;
+$logo-size: 15%;
+
+@import "general";
+@import "header";
+@import "footer";
+
+@mixin focus {
+    box-shadow: 0 0 5px 5px #48CFC6;
+    outline: none;
+}
+
+//buttons
+.btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    margin: 50px 0;
+    font-weight: 500;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+        @include focus;
+    }
+
+    &:active {
+        transform: translateY(4px);
+    }
+}
+
+//links
+a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: underline;
+        @include focus;
+    }
+}
+
+/*form*/
+
+.input-group {
+    position: relative;
+}
+
+.form__field {
+    padding: 0 15%;
+    background-color: $form-bkg;
+    height: 40px;
+    width: 70%;
+    border-radius: 8px;
+    margin: 10px 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+        @include focus;
+    }
+
+    &::placeholder {
+        color: $text-light;
+    }
+}
+
+.icon {
+    position: absolute;
+    color: $text-light;
+    font-size: 25px;
+    line-height: 60px;
+    padding: 0 2%;
+}
+
+.icon-danger {
+    color: black;
+    position: absolute;
+    right: 0;
+}
+
+.label-birthday {
+    display: block;
+    margin: 15px 0 5px;
+}
+
+.bd-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .birthday-dropdown {
+        width: 30%;
+        padding: 5px;
+        color: $text-light;
+    }
+}
+
+/*//////////Sign Up Page//////////*/
+#sign-up {
+    margin: 25px 0;
+}
+
+/*//////////Sign In Page//////////*/
+
+#sign-in {
+    .forgot-pw {
+        float: right;
+    }
+}
+
+/*//////////Questionnaire//////////*/
+
+//status bar in header
+.setup-status {
+    height: 20px;
+    margin-top: 5px;
+}
+
+//div containing question buttons
+.question-options {
+    position: relative;
+
+    .q-btn {
+        background-color: $background;
+        color: white;
+        border: solid 1px white;
+        height: 80px;
+        border-radius: 10px;
+        padding: 10px 40px 10px 20px;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 17px;
+        margin: 20px 0;
+
+        &:hover,
+        &:focus {
+            background: white;
+            text-decoration: none;
+            color: $color-purple;
+            font-weight: 500;
+            box-shadow: none;
+        }
+    }
+
+    .q-icon {
+        display: block;
+        position: absolute;
+        right: 5%;
+        font-size: 40px;
+        height: 40px;
+        top: 25%;
+    }
+}
+
+
+/*//////////Welcome Page//////////*/
+.container-main {
+    padding: 12% 7% 2%;
+}
+
+.welcome-slider {
+    width: 86%;
+    border-radius: 20px;
+    background-color: white;
+    padding: 15% 7% 10%;
+    text-align: center;
+
+    .welcome-header {
+        color: $purple-text;
+        text-align: left;
+        width: 90%;
+        line-height: 35px;
+    }
+
+    img {
+        height: 200px;
+        padding: 35px 0 50px;
+    }
+
+    h2 {
+        color: $grey;
+        text-align: left;
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+
+    p {
+        color: $grey;
+        line-height: 22px;
+    }
+
+    button {
+        margin-bottom: 0;
+        background-color: $button-dark-purple;
+        color: white;
+    }
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 8px 2px 20px 2px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active,
+.dot:hover {
+    width: 20px;
+    border-radius: 20px;
+}
+
+.welcome-text {
+    text-align: center;
+    line-height: 50px;
+
+    :first-child {
+        background-color: white;
+        color: $purple-text;
+    }
+
+    .welcome-btn {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+
+/*//////////Dashboard Page//////////*/
+
+.main-site {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.main-site-container {
+    padding: 0 0 100px 0;
+    min-height: 100vh; /* will cover the 100% of viewport */
+    position: relative;
+}
+
+.main-site-main {
+    //overall white container
+    border-radius: 35px;
+    background: white;
+    width: 80%;
+    color: #313670;
+    padding: 5% 10%;
+    position: relative;
+    z-index: 2;
+
+    .h2 {
+        font-size: 14px;
+        font-weight: 500;
+        text-align: left;
+    }
+
+    //drop down of what time frame to see your gains
+    #roundup__timeframe {
+        width: 90%;
+        background: #F3F3F3;
+        color: #535353;
+        height: 40px;
+        padding: 0 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        border-radius: 10px;
+
+        //dropdown icon
+        i {
+            display: inline-block;
+            font-size: 30px;
+            color: #535353;
+        }
+
+        //text displaying on the dropdown
+        p {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+
+    //when the drop down is expanded this container shows
+    #timeframe__menu {
+        display: none;
+        width: 100%;
+        background: #F3F3F3;
+        text-align: center;
+        font-size: 14px;
+        margin-top: 10px;
+
+        li {
+            list-style: none;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        a {
+            color: #535353;
+            font-weight: 300;
+        }
+
+        //this is the li that is currently selected in the drop down
+        .active-time {
+            background: #E6E6E6;
+
+            a {
+                font-weight: 600;
+            }
+            
+        }
+        
+    }
+}
+
+
+.dash-main {
+    .round-up__graph {
+        margin-top: 20px;
+    }
+
+    //button to make a one time payment
+    .dash-btn {
+        width: 100%;
+        background: #373FA3;
+        color: #FFFFFF;
+        margin: 30px 0 0;
+    }
+
+    //button to link bank account
+    #linkAccount {
+        display: none;
+    }
+
+    //icon showing when you make a one time payment
+
+    #paymentDisplay {
+        position: relative;
+
+        .linked-icon-container {
+            border-radius: 50%;
+            background-color: #FBFBFB;
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            line-height: 140px;
+            top: -65px;
+            left: 50%;
+            margin-left: -60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            i::before {
+                font-size: 80px;
+                border-radius: 50%;
+                height: 80px;
+                width: 80px;
+                text-align: center;
+                display: block;
+            }
+    
+            .alert-not-linked::before {
+                color: #EC8FB2;
+                border: solid 10px #EC8FB2;
+            }
+    
+            .alert-linked::before {
+                color: #34D885;
+                border: solid 10px #34D885;
+            }
+        }
+    
+        //content displaying when you go to make a one time payment
+        .linked-content {
+            width: 90%;
+            text-align: center;
+            border-radius: 15px;
+            background: #FBFBFB;
+            border: solid 1px #8D8D8D;
+            box-shadow: 0 1px 5px 2px #8D8D8D;
+            padding: 20% 5% 5%;
+            margin-top: 50px;
+            p {
+                color: #8D8D8D;
+                font-size: 20px;
+            }
+        }  
+    }
+    
+}
+
+
+
+.trans-summary {
+    display: flex;
+
+    .trans-summary__today {
+        width: 30%;
+
+        .trans-summary__today__value {
+            position: relative;
+            height: 50px;
+            margin: 40px 0 0;
+
+            .today__value--dollar {
+                font-size: 25px;
+                font-weight: 500;
+                align-self: flex-start;
+            }
+
+            .today__value--main {
+                font-size: 50px;
+                font-weight: 500;
+                position: absolute;
+                top: -10px;
+                left: 20%;
+            }
+
+            .today__value--cents {
+                font-size: 20px;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+            }
+        }
+
+        .trans-summary__today--text {
+            font-size: 10px;
+            text-align: center;
+        }
+    }
+}
+
+
+.hidden {
+    display: none;
+}
+
+.transaction__items {
+    margin: 20px 0;
+
+    h2 {
+        font-weight: 600;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+.general__list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+
+    .general__list-item-title {
+        font-size: 16px;
+        font-weight: 400;
+        color: #535353;
+    }
+
+    .general__list-item-price {
+        color: #535353;
+        font-weight: 600;
+    }
+}
+
+.details__list--item {
+    color: #8D8D8D;
+    margin: 10px 20px;
+    padding: 0;
+
+    .details-title {
+        font-weight: 400;
+    }
+
+    .details-amount {
+        font-weight: 600;
+    }
+
+    .details__time-title {
+        font-weight: 300;
+        font-size: 12px;
+    }
+
+    .details__time-time {
+        font-size: 12px;
+    }
+}
+
+.details__time {
+    margin-top: 20px;
+
+    li {
+        margin: 5px 20px;
+    }
+}
+
+.details-active {
+    background-color: #F3F3FA;
+    border-radius: 10px;
+}
+
+.ontop-main {
+    z-index: 2;
+    position: absolute;
+    top: 275px;
+    min-height: 40%;
+}
+
+
+/*//////////Pool//////////*/
+
+.pool-summary {
+    text-align: center;
+
+    .pool-summary__amount {
+        position: relative;
+        height: 70px;
+
+        .pool__value--dollar {
+            font-size: 26px;
+            font-weight: 500;
+            position: absolute;
+            top: 10px;
+            left: 30%;
+        }
+    
+        .pool__value--main {
+            font-size: 50px;
+            font-weight: 500;
+            position: absolute;
+            top: 0;
+            left: 35%;
+        }
+    }
+
+    .pool-summary__text {
+        font-size: 12px;
+    }
+}
+
+.month-slider {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    margin: 15px 0 0;
+    height: 30px;
+
+    .month-slide {
+        height: 30px;
+        width: 70px;
+        text-align: center;
+        border-radius: 20px;
+        font-size: 12px;
+        line-height: 30px;
+    }
+
+    .month--active {
+        display: block;
+        background-color: #373FA3;
+        position: absolute;
+        left: 50%;
+        margin-left: -35px;
+    }
+
+    .month--left {
+        position: absolute;
+        left: 15%;
+    }
+
+    .month--right {
+        position: absolute;
+        right: 15%;
+    }
+
+    .month--hidden {
+        display: none;
+    }
+
+    .month-slider__btn {
+        background-color: #4953CF;
+        color: white;
+        font-size: 20px;
+        display: inline;
+        position: absolute;
+        top: 1px;
+    }
+
+    .btn--left {
+        left: 5%;
+    }
+
+    .btn--right {
+        right: 5%;
+    }
+}
+
+.arrow__icon {
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        transform: translateY(4px);
+    }
+}
+
+.expand__page {
+    font-size: 30px;
+    color: #A0A0A0;
+    width: 100%;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    background-color: white;
+
+    i {
+        line-height: 20px;
+    }
+}
+
+.expanded {
+    position: static;
+    height: 100%;
+}
+
+.pool_type {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 30px;
+
+    .pool_type-btn {
+        width: 30%;
+        font-weight: 300;
+        font-size: 12px;
+        height: 30px;
+        border: solid 1px #646464;
+        background-color: white;
+        color: #535353;
+        margin: 0;
+
+        &:focus {
+            background-color: #E2E2E2;
+            box-shadow: none;
+            text-decoration: none;
+        }
+    }
+}
+
+.h2__pool {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.pool__list-item-title {
+    width: 20%;
+}
+
+.pool_invite-btn {
+    background-color: #373FA3;
+    color: white;
+    height: 40px;
+    font-size: 12px;
+    margin: 40px 0 10px;
+}
+
