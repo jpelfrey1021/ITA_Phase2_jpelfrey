@@ -100,11 +100,32 @@ function expandDetails(title) {
   previousElement = el;
 }
 
+function showElement(id1, id2, id3) {
+  let div = document.getElementById(id1)
+  let div2 = document.getElementById(id2)
+  let div3 = document.getElementById(id3)
+  if (div.classList.contains("hidden")) {
+    div.classList.remove('hidden');
+    div2.classList.add('hidden');
+    div3.classList.add('hidden');
+  } else {
+    div.classList.add('hidden');
+  }
+}
 
-var activeMonths = [];
+function expandPage() {
+  let header = document.getElementById('poolHeader');
+  let main = document.getElementById('poolMain');
 
-
-
-
+  if (header.classList.contains('hidden')) {
+    header.classList.remove('hidden')
+    main.classList.remove('expanded')
+    window.scrollTo(0,0);
+  } else {
+    header.classList.add('hidden')
+    main.classList.add('expanded')
+    window.scrollTo(0,0);
+  }
+}
 
 

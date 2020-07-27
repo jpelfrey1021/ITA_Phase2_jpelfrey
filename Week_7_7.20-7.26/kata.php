@@ -83,4 +83,8 @@ function solution($number){
         $sum += $num;
     }
     return $sum;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7d57591c7d613fb2149b85d0490b434dcd592c58
