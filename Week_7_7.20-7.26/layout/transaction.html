@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Welcome to Chipper</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="main-site">
+    <div class="container main-site-container">
+        <header class="main-site-header main-site-header--mediumheight">
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <img class="setup-status" src="images/setup checklist.png" alt="setup: completed 3 of 6">
+                    </li>
+                    <li>
+                        <a class="nav__link" href="" aria-label="Help"><i class="fa fa-question nav-icon"></i></a>
+                    </li>
+                    <li>
+                        <a class="nav__link" href="" aria-label="Message us"><i
+                                class="fa fa-comment nav-icon"></i></i></a>
+                    </li>
+                </ul>
+            </nav>
+            <h1 class="main-site-h2--large">Transactions List</h1>
+            <div class="trans-summary">
+                <div class="trans-summary__today">
+                    <div class="trans-summary__today__value">
+                        <p class="today__value--dollar">$</p>
+                        <p class="today__value--main">3</p>
+                        <p class="today__value--cents">.38</p>
+                    </div>
+                    <p class="trans-summary__today--text">Chipped Today</p>
+                </div>
+                <div class="trans-summary__chart" id="transaction__chart" style="height: 130px; width: 60%;">
+
+                </div>
+            </div>
+        </header>
+        <main class="main-site-main ontop-main">
+            <div class="times">
+                <div id="roundup__timeframe">
+                    <p id="chosen-time">This Week</p>
+                    <a onclick="showTimeFrames()" aria-label="change time frame"><i class="fa fa-angle-down"
+                            aria-hidden="true"></i></a>
+                </div>
+                <ul id="timeframe__menu">
+                    <li class="active-time"><a onclick="updateTime(this.id)" id="This Week">This Week</a></li>
+                    <li><a onclick="updateTime(this.id)" id="Last Week">Last Week</a></li>
+                    <li><a onclick="updateTime(this.id)" id="This Month">This Month</a></li>
+                    <li><a onclick="updateTime(this.id)" id="Last Month">Last Month</a></li>
+                    <li><a onclick="updateTime(this.id)" id="Custom">Custom</a></li>
+                </ul>
+            </div>
+            <div class="transaction__items">
+                <div class="transaction__items transactions-today">
+                    <h2 class="h2">Today</h2>
+                    <ul>
+                        <li>
+                            <div class="general__list-item">
+                                <a onclick="expandDetails('detail1')" class="general__list-item-title">Hopdoddy</a>
+                                <p class="general__list-item-price">+$0.42</p>
+                            </div>
+                            <div class="transaction__items--details hidden" id="detail1"></div>
+                        </li>
+                        <li>
+                            <div class="general__list-item">
+                                <a onclick="expandDetails('detail2')" class="general__list-item-title">Del Taco</a>
+                                <p class="general__list-item-price">+$1.22</p>
+                            </div>
+                            <div class="transaction__items--details hidden" id="detail2"></div>
+                        </li>
+                        <li>
+                            <div class="general__list-item">
+                                <a onclick="expandDetails('detail3')" class="general__list-item-title">Uber</a>
+                                <p class="general__list-item-price">+$0.39</p>
+                            </div>
+                            <div class="transaction__items--details hidden" id="detail3">
+                                <ul class="details__list">
+                                    <li class="details__list--item general__list-item">
+                                        <h4 class="details-title">Purchase</h4>
+                                        <p class='details-amount'>$9.61</p>
+                                    </li>
+                                    <li class="details__list--item general__list-item">
+                                        <h4 class="details-title">Chipped</h4>
+                                        <p class='details-amount'>+$0.39</p>
+                                    </li>
+                                    <li class="details__list--item general__list-item">
+                                        <h4 class="details-title">Capital One</h4>
+                                        <p class='details-amount'>*2890</p>
+                                    </li>
+                                </ul>
+                                <ul class="details__time">
+                                    <li class="details__list--item  general__list-item">
+                                        <h4 class="details__time-title">Date</h4>
+                                        <p class="details__time-time">05/21/2019</p>
+                                    </li>
+                                    <li class="details__list--item  general__list-item">
+                                        <h4 class="details__time-title">Time</h4>
+                                        <p class="details__time-time">15:30</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="general__list-item">
+                                <a onclick="expandDetails('detail4')" class="general__list-item-title">Starbucks</a>
+                                <p class="general__list-item-price">+$0.89</p>
+                            </div>
+                            <div class="transaction__items--details hidden" id="detail4"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="transaction__items transactions-yesterday ">
+                    <h2 class="h2">Yesterday</h2>
+                    <ul>
+                        <li>
+                            <div class="general__list-item">
+                                <a onclick="expandDetails('detail5')" class="general__list-item-title">Uber</a>
+                                <p class="general__list-item-price">+$1.50</p>
+                            </div>
+                            <div class="transaction__items--details hidden" id="detail5"></div>
+                        </li>
+                        <li>
+                            <div class="general__list-item">
+                                <a onclick="expandDetails('detail6')" class="general__list-item-title">Amazon</a>
+                                <p class="general__list-item-price">+$0.63</p>
+                            </div>
+                            <div class="transaction__items--details hidden" id="detail6"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <footer class="main-footer">
+            <a href="dash.html" class="menu-link"><i class="fa fa-home menu-icon" aria-label="home"></i></a>
+            <a href="transaction.html" class="menu-link"><i class="fa fa-refresh menu-icon"
+                    aria-label="transactions"></i></a>
+            <a href="savesettings.html" class="menu-link menu-icon menu-icon-image" aria-label="saving settings"></a>
+            <a href="pool.html" class="menu-link"><i class="fa fa-users menu-icon" aria-label="pool"></i></a>
+            <a href="settings.html" class="menu-link"><i class="fa fa-cog menu-icon" aria-label="settings"></i></a>
+        </footer>
+    </div>
+    <!--end container-->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/transactions-chart.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+
+</html>
