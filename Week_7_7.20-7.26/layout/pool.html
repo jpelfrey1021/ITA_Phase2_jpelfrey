@@ -15,7 +15,7 @@
 
 <body class="main-site">
     <div class="container main-site-container">
-        <header class="main-site-header main-site-header--mediumheight">
+        <header class="main-site-header main-site-header--mediumheight" id="poolHeader">
             <nav class="main-nav">
                 <ul>
                     <li>
@@ -45,104 +45,99 @@
                 <span class="month-slide month--right">July</span>
                 <span class="month-slide month--hidden">Aug</span>
 
-                <button class="month-slider__btn btn--left" onclick="plusDivs(-1)">&#10094;</button>
-                <button class="month-slider__btn btn--right" onclick="plusDivs(1)">&#10095;</button>
+                <button class="month-slider__btn btn--left arrow__icon" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="month-slider__btn btn--right arrow__icon" onclick="plusDivs(1)">&#10095;</button>
             </div>
         </header>
-        <main class="main-site-main">
-            <div class="times">
-                <div id="roundup__timeframe">
-                    <p id="chosen-time">This Week</p>
-                    <a onclick="showTimeFrames()" aria-label="change time frame"><i class="fa fa-angle-down"
-                            aria-hidden="true"></i></a>
-                </div>
-                <ul id="timeframe__menu">
-                    <li class="active-time"><a onclick="updateTime(this.id)" id="This Week">This Week</a></li>
-                    <li><a onclick="updateTime(this.id)" id="Last Week">Last Week</a></li>
-                    <li><a onclick="updateTime(this.id)" id="This Month">This Month</a></li>
-                    <li><a onclick="updateTime(this.id)" id="Last Month">Last Month</a></li>
-                    <li><a onclick="updateTime(this.id)" id="Custom">Custom</a></li>
-                </ul>
+        <main class="main-site-main ontop-main" id="poolMain">
+            <button onclick="expandPage();" class="expand__page arrow__icon"><i class="fa fa-angle-up" aria-hidden="true"></i></button>
+            <div class="pool_type">
+                <button onclick= "showElement('poolTotal', 'poolRecurring', 'poolOnetime');" class="btn pool_type-btn">All</button>
+                <button onclick= "showElement('poolRecurring', 'poolOnetime', 'poolTotal');" class="btn pool_type-btn">Recurring</button>
+                <button onclick= "showElement('poolOnetime', 'poolTotal', 'poolRecurring');" class="btn pool_type-btn">One-Time</button>
             </div>
-            <div class="transaction__items">
-                <div class="transaction__items transactions-today">
-                    <h2>Today</h2>
-                    <ul>
-                        <li>
-                            <div class="transaction__items--list-item">
-                                <a onclick="expandDetails('detail1')" class="transaction__items-title">Hopdoddy</a>
-                                <p class="transaction__items-price">+$0.42</p>
-                            </div>
-                            <div class="transaction__items--details hidden" id="detail1"></div>
-                        </li>
-                        <li>
-                            <div class="transaction__items--list-item">
-                                <a onclick="expandDetails('detail2')" class="transaction__items-title">Del Taco</a>
-                                <p class="transaction__items-price">+$1.22</p>
-                            </div>
-                            <div class="transaction__items--details hidden" id="detail2"></div>
-                        </li>
-                        <li>
-                            <div class="transaction__items--list-item">
-                                <a onclick="expandDetails('detail3')" class="transaction__items-title">Uber</a>
-                                <p class="transaction__items-price">+$0.39</p>
-                            </div>
-                            <div class="transaction__items--details hidden" id="detail3">
-                                <ul class="details__list">
-                                    <li class="details__list--item">
-                                        <h4 class="details-title">Purchase</h4>
-                                        <p class='details-amount'>$9.61</p>
-                                    </li>
-                                    <li class="details__list--item">
-                                        <h4 class="details-title">Chipped</h4>
-                                        <p class='details-amount'>+$0.39</p>
-                                    </li>
-                                    <li class="details__list--item">
-                                        <h4 class="details-title">Capital One</h4>
-                                        <p class='details-amount'>*2890</p>
-                                    </li>
-                                </ul>
-                                <ul class="details__time">
-                                    <li class="details__list--item">
-                                        <h4 class="details__time-title">Date</h4>
-                                        <p class="details__time-time">05/21/2019</p>
-                                    </li>
-                                    <li class="details__list--item">
-                                        <h4 class="details__time-title">Time</h4>
-                                        <p class="details__time-time">15:30</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="transaction__items--list-item">
-                                <a onclick="expandDetails('detail4')" class="transaction__items-title">Starbucks</a>
-                                <p class="transaction__items-price">+$0.89</p>
-                            </div>
-                            <div class="transaction__items--details hidden" id="detail4"></div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="transaction__items transactions-yesterday">
-                    <h2>Yesterday</h2>
-                    <ul>
-                        <li>
-                            <div class="transaction__items--list-item">
-                                <a onclick="expandDetails('detail5')" class="transaction__items-title">Uber</a>
-                                <p class="transaction__items-price">+$1.50</p>
-                            </div>
-                            <div class="transaction__items--details hidden" id="detail5"></div>
-                        </li>
-                        <li>
-                            <div class="transaction__items--list-item">
-                                <a onclick="expandDetails('detail6')" class="transaction__items-title">Amazon</a>
-                                <p class="transaction__items-price">+$0.63</p>
-                            </div>
-                            <div class="transaction__items--details hidden" id="detail6"></div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <ul id="poolTotal">
+                <li class="general__list-item">
+                    <h2 class="h2__pool">Pool Total</h2>
+                    <h2 class="h2__pool">$150</h2>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Mom</a>
+                    <p class = "general__list-item-details">Recurring</p>
+                    <p class="general__list-item-price">$100</p>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title" >Grandma</a>
+                    <p class = "general__list-item-details">Recurring</p>
+                    <p class="general__list-item-price">$100</p>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Bobby</a>
+                    <p class = "general__list-item-details">Recurring</p>
+                    <p class="general__list-item-price">$50</p>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Wendy</a>
+                    <p class = "general__list-item-details">One Time</p>
+                    <p class="general__list-item-price">$50</p>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Mary</a>
+                    <p class = "general__list-item-details">One Time</p>
+                    <p class="general__list-item-price">$10</p>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Susy</a>
+                    <p class = "general__list-item-details">One Time</p>
+                    <p class="general__list-item-price">$30</p>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Aunt Carol</a>
+                    <p class = "general__list-item-details">One Time</p>
+                    <p class="general__list-item-price">$75</p>
+                </li>
+            </ul>
+            <ul id="poolRecurring" class="hidden">
+                <li class="general__list-item">
+                    <h2 class="h2__pool">Recurring Total</h2>
+                    <h2 class="h2__pool">$250</h2>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Mom</a>
+                    <p class="general__list-item-price">$100</p>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title" >Grandma</a>
+                    <p class="general__list-item-price">$100</p>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Bobby</a>
+                    <p class="general__list-item-price">$50</p>
+                </li>
+            </ul>
+            <ul id="poolOnetime" class="hidden">
+                <li class="general__list-item">
+                    <h2 class="h2__pool">One-Time Total</h2>
+                    <h2 class="h2__pool">$50</h2>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Wendy</a>
+                    <p class="general__list-item-price">$50</p>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Mary</a>
+                    <p class="general__list-item-price">$10</p>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Susy</a>
+                    <p class="general__list-item-price">$30</p>
+                </li>
+                <li class="general__list-item">
+                    <a class="general__list-item-title pool__list-item-title">Aunt Carol</a>
+                    <p class="general__list-item-price">$75</p>
+                </li>
+            </ul>
+            <button class="btn pool_invite-btn">Invite People</button>
         </main>
         <footer class="main-footer">
             <a href="dash.html" class="menu-link"><i class="fa fa-home menu-icon" aria-label="home"></i></a>

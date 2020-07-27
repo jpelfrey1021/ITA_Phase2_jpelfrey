@@ -250,9 +250,9 @@ a {
 }
 
 .main-site-container {
+    padding: 0 0 100px 0;
+    min-height: 100vh; /* will cover the 100% of viewport */
     position: relative;
-    padding: 0 0 15%;
-    min-height: 100vh;
 }
 
 .main-site-main {
@@ -265,7 +265,7 @@ a {
     position: relative;
     z-index: 2;
 
-    h2 {
+    .h2 {
         font-size: 14px;
         font-weight: 500;
         text-align: left;
@@ -462,26 +462,24 @@ a {
     h2 {
         font-weight: 600;
     }
-
-    li {
-        list-style: none;
-    }
 }
 
+li {
+    list-style: none;
+}
 
-
-.transaction__items--list-item {
+.general__list-item {
     display: flex;
     justify-content: space-between;
     padding: 5px;
 
-    .transaction__items-title {
+    .general__list-item-title {
         font-size: 16px;
         font-weight: 400;
         color: #535353;
     }
 
-    .transaction__items-price {
+    .general__list-item-price {
         color: #535353;
         font-weight: 600;
     }
@@ -489,9 +487,8 @@ a {
 
 .details__list--item {
     color: #8D8D8D;
-    display: flex;
-    justify-content: space-between;
     margin: 10px 20px;
+    padding: 0;
 
     .details-title {
         font-weight: 400;
@@ -524,8 +521,15 @@ a {
     border-radius: 10px;
 }
 
+.ontop-main {
+    z-index: 2;
+    position: absolute;
+    top: 275px;
+    min-height: 40%;
+}
 
 
+/*//////////Pool//////////*/
 
 .pool-summary {
     text-align: center;
@@ -611,3 +615,73 @@ a {
         right: 5%;
     }
 }
+
+.arrow__icon {
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        transform: translateY(4px);
+    }
+}
+
+.expand__page {
+    font-size: 30px;
+    color: #A0A0A0;
+    width: 100%;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    background-color: white;
+
+    i {
+        line-height: 20px;
+    }
+}
+
+.expanded {
+    position: static;
+    height: 100%;
+}
+
+.pool_type {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 30px;
+
+    .pool_type-btn {
+        width: 30%;
+        font-weight: 300;
+        font-size: 12px;
+        height: 30px;
+        border: solid 1px #646464;
+        background-color: white;
+        color: #535353;
+        margin: 0;
+
+        &:focus {
+            background-color: #E2E2E2;
+            box-shadow: none;
+            text-decoration: none;
+        }
+    }
+}
+
+.h2__pool {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.pool__list-item-title {
+    width: 20%;
+}
+
+.pool_invite-btn {
+    background-color: #373FA3;
+    color: white;
+    height: 40px;
+    font-size: 12px;
+    margin: 40px 0 10px;
+}
+
