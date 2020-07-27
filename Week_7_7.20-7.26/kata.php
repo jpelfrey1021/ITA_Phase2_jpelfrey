@@ -34,3 +34,53 @@ function count_smileys($arr): int {
     }
     return $count;
 }
+
+//Dashatize it
+function dashatize(int $num): string {
+    $num = str_replace('-','',$num); //get rid of any existing dashes
+    $numArr = str_split($num); //make it an array
+    $finalArr = []; //will hold final array with dashes
+    
+    for ($x = 0; $x < count($numArr); $x++) {
+      $finalArr[] = $numArr[$x]; //put number in the new array
+      //if this number or the next is a negative and it's not the last number add
+      //a dash after the number
+        if (($numArr[$x] % 2 != 0 || $numArr[$x+1] % 2 != 0) && $x != count($numArr) -1) {
+            $finalArr[] = '-';
+        } 
+    }
+    return implode('', $finalArr); //convert back to a string
+}
+
+
+//Simple remove duplicates
+function solve($arr) {
+    $length = count($arr);
+    
+    for ($x = 0; $x < $length; $x++) {
+        $adjustedArr = $arr;
+        unset($adjustedArr[$x]);
+
+        if (in_array($arr[$x],$adjustedArr)) {
+            unset($arr[$x]);
+        }
+    }
+    
+    return array_values($arr);
+}
+
+
+//Multiples of 3 or 5
+function solution($number){
+    $multiples = [];
+    for ($x = 1; $x < $number; $x++) {
+        if ($x % 3 == 0 || $x % 5 == 0) {
+            $multiples[] = $x;
+        }
+    }
+    $sum = 0;
+    foreach ($multiples as $num) {
+        $sum += $num;
+    }
+    return $sum;
+}
