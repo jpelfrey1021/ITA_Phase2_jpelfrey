@@ -1,0 +1,28 @@
+
+//welcome page container
+.container-main {
+    padding: 12% 7% 2%;
+}
+
+//body for main site
+.main-site {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+
+//container for main site
+.main-site-container {
+    padding: 0 0 50px 0;
+    min-height: calc( 100vh - 80px) ; /* will cover the 100% of viewport */
+    position: relative;
+}
+
+//main content for pages with medium header
+.medium-header-main {
+    min-height: calc(100vh - 115px - 273px);
+}
+
+.container-purple {
+    background-color: $medium-purple;
+}

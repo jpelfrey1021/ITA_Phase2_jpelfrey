@@ -1,0 +1,57 @@
+//drop down of what time frame to see your gains
+#roundup__timeframe {
+    width: 90%;
+    background: $very-light-grey;
+    color: $grey;
+    height: 40px;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+
+    //dropdown icon
+    i {
+        display: inline-block;
+        font-size: 30px;
+        color: $grey;
+    }
+
+    //text displaying on the dropdown
+    p {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 500;
+    }
+}
+
+//when the drop down is expanded this container shows
+#timeframe__menu {
+    display: none;
+    width: 100%;
+    background: $very-light-grey;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+
+    li {
+        list-style: none;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    a {
+        color: $grey;
+        font-weight: 300;
+    }
+
+    //this is the li that is currently selected in the drop down
+    .active-time {
+        background: $lighter-grey;
+
+        a {
+            font-weight: 600;
+        } 
+    }
+}

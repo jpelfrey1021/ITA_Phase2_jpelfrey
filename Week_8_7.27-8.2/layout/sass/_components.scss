@@ -1,0 +1,40 @@
+//links
+a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: underline;
+        @include focus;
+    }
+}
+
+//buttons
+.btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    margin: 50px 0;
+    font-weight: 500;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+        @include focus;
+    }
+
+    &:active {
+        transform: translateY(4px);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+li {
+    list-style: none;
+}

@@ -70,11 +70,11 @@
                                 aria-hidden="true"></i></a>
                     </div>
                     <ul id="timeframe__menu">
-                        <li class="active-time"><a onclick="updateTime(this.id)" id="This Week">This Week</a></li>
-                        <li><a onclick="updateTime(this.id)" id="Last Week">Last Week</a></li>
-                        <li><a onclick="updateTime(this.id)" id="This Month">This Month</a></li>
-                        <li><a onclick="updateTime(this.id)" id="Last Month">Last Month</a></li>
-                        <li><a onclick="updateTime(this.id)" id="Custom">Custom</a></li>
+                        <li class="month-option active-time"><a onclick="updateTime(this.id)" id="This Week">This Week</a></li>
+                        <li class="month-option"><a onclick="updateTime(this.id)" id="Last Week">Last Week</a></li>
+                        <li class="month-option"><a onclick="updateTime(this.id)" id="This Month">This Month</a></li>
+                        <li class="month-option"><a onclick="updateTime(this.id)" id="Last Month">Last Month</a></li>
+                        <li class="month-option"><a onclick="updateTime(this.id)" id="Custom">Custom</a></li>
                     </ul>
                 </div>
                 <div class="round-up__graph" id="chartContainer" style="height: 200px; width: 100%;">
@@ -88,11 +88,14 @@
             </form>
         </main>
         <footer class="main-footer">
-            <a href="dash.html" class="menu-link"><i class="fa fa-home menu-icon" aria-label="home"></i></a>
-            <a href="transaction.html" class="menu-link"><i class="fa fa-refresh menu-icon" aria-label="transactions"></i></a>
+            <div class="footer-container">
+                <a href="dash.html" class="menu-link"><i class="fa fa-home menu-icon" aria-label="home"></i></a>
+            <a href="transaction.html" class="menu-link"><i class="fa fa-refresh menu-icon"
+                    aria-label="transactions"></i></a>
             <a href="savesettings.html" class="menu-link menu-icon menu-icon-image" aria-label="saving settings"></a>
             <a href="pool.html" class="menu-link"><i class="fa fa-users menu-icon" aria-label="pool"></i></a>
             <a href="settings.html" class="menu-link"><i class="fa fa-cog menu-icon" aria-label="settings"></i></a>
+            </div>
         </footer>
     </div>
     <!--end container-->

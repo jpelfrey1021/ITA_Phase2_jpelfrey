@@ -27,6 +27,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+//expands drop down menu when selected
 function showTimeFrames() {
   var x = document.getElementById("timeframe__menu");
   if (x.style.display === "block") {
@@ -36,9 +37,27 @@ function showTimeFrames() {
   }
 }
 
+//update time shown as featured on drop down when new time is selected. takes in the selected option
 function updateTime(time) {
+  //find all time frames
+  var timeFrames = document.querySelectorAll(".month-option")
+
+  //find the element that will show selected time and set it to the chosen time
   var x = document.getElementById("chosen-time");
   x.innerHTML = time;
+
+  //remove active class from all time frames then add it to the chosen time
+  [].forEach.call(timeFrames, function(frame) {
+    if (frame.classList.contains("active-time")) {
+      frame.classList.remove("active-time");
+    }
+    if (frame.children[0].innerHTML == time) {
+      frame.classList.add("active-time");
+    }
+    
+  });
+
+  //contract the drop down list
   var y = document.getElementById("timeframe__menu");
   y.style.display = "none";
 }
@@ -116,16 +135,9 @@ function showElement(id1, id2, id3) {
 function expandPage() {
   let header = document.getElementById('poolHeader');
   let main = document.getElementById('poolMain');
-
-  if (header.classList.contains('hidden')) {
-    header.classList.remove('hidden')
-    main.classList.remove('expanded')
-    window.scrollTo(0,0);
-  } else {
-    header.classList.add('hidden')
-    main.classList.add('expanded')
-    window.scrollTo(0,0);
-  }
+  main.classList.toggle('expanded');
+  header.classList.toggle('hidden')
+  window.scrollTo(0,0);
 }
 
 

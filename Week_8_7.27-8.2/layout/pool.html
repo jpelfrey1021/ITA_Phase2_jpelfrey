@@ -14,7 +14,7 @@
 </head>
 
 <body class="main-site">
-    <div class="container main-site-container">
+    <div class="container-purple container main-site-container">
         <header class="main-site-header main-site-header--mediumheight" id="poolHeader">
             <nav class="main-nav">
                 <ul>
@@ -49,7 +49,7 @@
                 <button class="month-slider__btn btn--right arrow__icon" onclick="plusDivs(1)">&#10095;</button>
             </div>
         </header>
-        <main class="main-site-main ontop-main" id="poolMain">
+        <main class="main-site-main medium-header-main" id="poolMain">
             <button onclick="expandPage();" class="expand__page arrow__icon"><i class="fa fa-angle-up" aria-hidden="true"></i></button>
             <div class="pool_type">
                 <button onclick= "showElement('poolTotal', 'poolRecurring', 'poolOnetime');" class="btn pool_type-btn">All</button>
@@ -140,12 +140,14 @@
             <button class="btn pool_invite-btn">Invite People</button>
         </main>
         <footer class="main-footer">
-            <a href="dash.html" class="menu-link"><i class="fa fa-home menu-icon" aria-label="home"></i></a>
+            <div class="footer-container">
+                <a href="dash.html" class="menu-link"><i class="fa fa-home menu-icon" aria-label="home"></i></a>
             <a href="transaction.html" class="menu-link"><i class="fa fa-refresh menu-icon"
                     aria-label="transactions"></i></a>
             <a href="savesettings.html" class="menu-link menu-icon menu-icon-image" aria-label="saving settings"></a>
             <a href="pool.html" class="menu-link"><i class="fa fa-users menu-icon" aria-label="pool"></i></a>
             <a href="settings.html" class="menu-link"><i class="fa fa-cog menu-icon" aria-label="settings"></i></a>
+            </div>
         </footer>
     </div>
     <!--end container-->
