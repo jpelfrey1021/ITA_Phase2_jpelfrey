@@ -119,6 +119,68 @@ function expandDetails(title) {
   previousElement = el;
 }
 
+
+
+function plusDivs(direction) {
+  let Monthnames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug','Sep','Oct','Nov','Dec'];
+  let active = document.querySelectorAll(".month-slide")
+  let months = []; //active months
+
+  for (let i=0; i<3; i++) { //push text of active months into active month array
+    Monthnames.forEach(function(value) {
+      if (value == active[i].innerHTML) {
+        months.push(value)
+      }
+    })
+  }
+
+  function findNextMonth() {
+    let nextMonth;
+    Monthnames.forEach(function(value, index) {
+      if (value === months[2]) {
+        nextMonth = Monthnames[index+1];
+      }
+    })
+    return nextMonth;
+  }
+
+  function findPreviousMonth() {
+    let previousMonth;
+    Monthnames.forEach(function(value, index) {
+      if (value === months[0]) {
+        previousMonth = Monthnames[index-1];
+      }
+    })
+    return previousMonth;
+  }
+
+  if (direction === 1) { //increase months
+    if (months[2] === 'Dec') {
+      months.push('Jan');
+    } else {
+      months.push(findNextMonth());
+    }
+    months.shift();
+  } else if (direction === -1) { //decrease months
+    if (months[0] === 'Jan') {
+      months.unshift('Dec');
+    } else {
+      months.unshift(findPreviousMonth());
+    }
+    months.pop();
+  }
+
+  //assign html elements to new months
+  let left = document.querySelector('.month--left');
+  let center = document.querySelector('.month--active');
+  let right = document.querySelector('.month--right');
+
+  left.innerHTML = months[0];
+  center.innerHTML = months[1];
+  right.innerHTML = months[2];
+}
+
+
 function showElement(id1, id2, id3) {
   let div = document.getElementById(id1)
   let div2 = document.getElementById(id2)
